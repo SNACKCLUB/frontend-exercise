@@ -1,0 +1,6 @@
+# Prisma Migrate lockfile v1
+
+20200811214510-init
+20200811215236-make-email-and-username-unique
+20200811223934-change-index-on-upvotes
+20200811235947-add-date-to-users

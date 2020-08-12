@@ -1,0 +1,16 @@
+{
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true
+  },
+  "sqltools.connections": [
+    {
+      "database": "${workspaceFolder:frontend-exercise}/prisma/dev.db",
+      "driver": "SQLite",
+      "name": "pierre",
+      "previewLimit": 50
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}

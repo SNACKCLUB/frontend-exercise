@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource sqlite {
+  provider = "sqlite"
+  url      = env("SQLITE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Opinions {
+  id        Int       @default(autoincrement()) @id
+  createdAt DateTime  @default(now())
+  title     String
+  content   String?
+  upvotes   Upvotes[]
+  user      Users     @relation(fields: [user_id], references: [id])
+  user_id   String
+}
+
+model Upvotes {
+  opinion    Opinions @relation(fields: [opinion_id], references: [id])
+  opinion_id Int
+  user       Users    @relation(fields: [user_id], references: [id])
+  user_id    String
+
+  @@id([opinion_id, user_id])
+}
+
+model Users {
+  id         String     @default(uuid()) @id
+  username   String     @unique
+  password   String
+  email      String     @unique
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt @default(now())
+  opinions   Opinions[]
+  upvotes    Upvotes[]
+
+}

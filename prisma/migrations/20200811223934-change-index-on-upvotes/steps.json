@@ -1,0 +1,45 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "Upvotes",
+      "field": "id"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Upvotes",
+      "field": "user",
+      "arity": "Required"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Upvotes",
+      "field": "user_id",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Model",
+          "model": "Upvotes"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Model",
+          "model": "Upvotes"
+        },
+        "directive": "id"
+      },
+      "argument": "",
+      "value": "[opinion_id, user_id]"
+    }
+  ]
+}
