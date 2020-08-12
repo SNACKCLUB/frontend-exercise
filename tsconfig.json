@@ -9,5 +9,6 @@
       "@types", // custom merged types must be first in a list
       "node_modules/@types"
     ]
-  }
+  },
+  "include": ["src"]
 }
