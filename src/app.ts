@@ -1,8 +1,12 @@
+import { config } from 'dotenv';
+config();
+
 import { isCelebrate } from 'celebrate';
 import express, { NextFunction } from 'express';
 import morgan from 'morgan';
 import authRouters from './auth.routers';
 import opinionsRouters from './opinions.routers';
+
 require('express-async-errors');
 
 const app = express();
