@@ -1,7 +1,5 @@
 import { Users } from '@prisma/client';
 import * as jose from 'jose';
-
-console.log(process.env.JWT_SECRET || String(Math.random()));
 const key = jose.JWK.asKey(process.env.JWT_SECRET || String(Math.random()));
 
 export const signJwt = (user: Users) => {
