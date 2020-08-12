@@ -3,6 +3,7 @@ import { celebrate, Joi, Segments } from 'celebrate';
 import express from 'express';
 import { signJwt } from './jwt';
 import prisma from './prisma';
+
 const routers = express.Router();
 
 routers.post(

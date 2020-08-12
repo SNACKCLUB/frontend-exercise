@@ -2,14 +2,13 @@ import { config } from 'dotenv';
 config();
 
 import express, { NextFunction } from 'express';
+require('express-async-errors');
 import { isCelebrate } from 'celebrate';
 import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
 import authRouters from './auth.routers';
 import opinionsRouters from './opinions.routers';
-
-require('express-async-errors');
 
 const app = express();
 
