@@ -6,8 +6,8 @@
   "scripts": {
     "pretest": "yarn db:generate",
     "test": "jest",
-    "db:create": "dotenv -- yarn prisma migrate save --experimental",
-    "db:save": "dotenv -- yarn prisma migrate up --experimental",
+    "db:save": "dotenv -- yarn prisma migrate save --experimental",
+    "db:migrate": "dotenv -- yarn prisma migrate up --experimental",
     "db:generate": "dotenv -- yarn prisma generate",
     "clean": "rimraf dist",
     "prebuild": "yarn clean && yarn db:generate",
