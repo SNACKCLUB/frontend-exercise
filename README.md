@@ -7,12 +7,16 @@
 <h1> @loudgg/frontend-exercise</h1>
 <h3> Platforma de opinião para a cidade de São Paulo </h3>
 Exercício para vaga de front-end na @loudgg
+
+[**Documentação da API**](https://sp-opinions-docs.pierreortega.dev/)
+
   </p>
 </div>
 
 ---
 
-[**API Documentação**](https://sp-opinions-docs.pierreortega.dev/)
+![CI](https://github.com/LOUDgg/frontend-exercise/workflows/CI/badge.svg)
+![LICENSE](https://img.shields.io/github/license/loudgg/frontend-exercise)
 
 **Objetivo**
 
@@ -34,6 +38,8 @@ própria população.
 - adicionar nova opinião com a habilidade de usar [markdown](https://canaltech.com.br/software/Voce-sabe-o-que-e-Markdown/);
 - adicionar/remover upvote de uma opinião. Upvotes são únicos por
   usuários e somente as mesmas podem remover.
+
+Se sinta avontade em usar o backend dado ou fork esse repositorio e rode o seu mesmo.
 
 Para concluir o exercício, envie-nos o código junto com as instruções de execução.
 
