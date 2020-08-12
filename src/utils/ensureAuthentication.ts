@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client';
 import * as express from 'express';
 import { decodeJwt } from '../jwt';
-
-const prisma = new PrismaClient();
+import prisma from '../prisma';
 
 const ensureAuthentication: express.Handler = async (req, res, next) => {
   if (req.headers.authorization) {

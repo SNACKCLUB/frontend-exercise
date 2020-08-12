@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "pretest": "yarn db:generate",
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "db:save": "dotenv -- yarn prisma migrate save --experimental",
     "db:migrate": "dotenv -- yarn prisma migrate up --experimental",
     "db:generate": "dotenv -- yarn prisma generate",
