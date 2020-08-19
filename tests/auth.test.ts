@@ -41,6 +41,8 @@ test('user can login given right credentials', async () => {
     .expect(200);
 
   expect(response.body.token).toBeDefined();
+  expect(response.body.user.id).toBeDefined();
+  expect(response.body.user.password).not.toBeDefined();
 });
 
 test('user cannot login given wrong credentials', async () => {
